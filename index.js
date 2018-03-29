@@ -72,13 +72,13 @@ let server = http.createServer(function(request,response){
                 pg(response);
                 response.end();
         
-        }else if(request.url === "/distributor" && request.method === "GET"){
+        }else if(request.url === "/distribution" && request.method === "GET"){
                 response.statusCode = 200;
                 distributor(response);
                 response.end();
         }else{
             console.log("invalid route");
-            response.end("Ya done messed up A-Aron");
+            response.end("Error, could not load page");
         }
 
 });
